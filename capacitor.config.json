@@ -1,0 +1,11 @@
+{
+  "appId": "com.kedit.studio",
+  "appName": "K-EDIT STUDIO",
+  "webDir": "www",
+  "server": { "androidScheme": "https" },
+  "android": { "backgroundColor": "#0b0b14", "allowMixedContent": false },
+  "plugins": {
+    "CapacitorHttp": { "enabled": true },
+    "SplashScreen": { "launchShowDuration": 0 }
+  }
+}
