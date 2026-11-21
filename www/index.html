@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b14">
+<title>K-EDIT STUDIO</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="splash"><div class="logo">K</div><h1>K-EDIT STUDIO</h1><small>Video • Music • Photo • AI</small></div>
+
+<!-- HOME -->
+<section id="home" class="screen active"><div id="home-body" class="scroll"></div></section>
+
+<!-- AI TOOLS -->
+<section id="ai" class="screen">
+  <header class="bar"><button class="ibtn" data-go="home" aria-label="Back"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><b>AI tools</b></header>
+  <div id="ai-body" class="scroll"></div>
+</section>
+
+<!-- SETTINGS -->
+<section id="settings" class="screen">
+  <header class="bar"><button class="ibtn" data-go="home" aria-label="Back"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button><b>Settings</b></header>
+  <div id="settings-body" class="scroll pad"></div>
+</section>
+
+<!-- VIDEO / AUDIO STUDIO -->
+<section id="studio" class="screen">
+  <header class="bar">
+    <button class="ibtn" id="st-back" aria-label="Back"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button id="st-title" class="title">Untitled</button>
+    <button class="ibtn" id="st-undo" aria-label="Undo"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 010 12h-3"/></svg></button>
+    <button class="ibtn" id="st-redo" aria-label="Redo"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H10a6 6 0 000 12h3"/></svg></button>
+    <button class="ibtn" id="st-ratio" aria-label="Canvas"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/></svg></button>
+    <button class="btn primary sm" id="st-export">Export</button>
+  </header>
+  <div id="stage"><div id="stage-host"><canvas id="stage-canvas"></canvas></div></div>
+  <div class="tbar"><button class="ibtn big" id="st-play" aria-label="Play"></button><span id="st-time">0:00 / 0:00</span></div>
+  <div id="tl-host"></div>
+  <div id="panel" class="hidden"></div>
+  <nav id="toolbar"></nav>
+</section>
+
+<!-- PHOTO EDITOR -->
+<section id="photo" class="screen">
+  <header class="bar">
+    <button class="ibtn" id="ph-back" aria-label="Back"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <b class="title">Photo</b>
+    <button class="ibtn" id="ph-undo" aria-label="Undo"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 010 12h-3"/></svg></button>
+    <button class="ibtn" id="ph-redo" aria-label="Redo"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14l5-5-5-5"/><path d="M20 9H10a6 6 0 000 12h3"/></svg></button>
+    <button class="btn primary sm" id="ph-export">Save</button>
+  </header>
+  <div id="ph-stage" class="checker-dark"><div id="ph-host"><canvas id="ph-canvas"></canvas></div></div>
+  <div id="ph-panel" class="hidden"></div>
+  <nav id="ph-toolbar"></nav>
+</section>
+
+<div id="busy"><div class="busy-box"><div class="spin"></div><div id="busy-text">Working…</div><div class="bar-o" style="display:none"><i id="busy-bar"></i></div><button id="busy-cancel" class="btn sm" style="display:none">Cancel</button></div></div>
+<div id="modal-root"></div>
+<div id="toast" class="toast"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/core.js"></script>
+<script src="js/model.js"></script>
+<script src="js/gl.js"></script>
+<script src="js/gfx.js"></script>
+<script src="js/media.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/timeline.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/panels.js"></script>
+<script src="js/export.js"></script>
+<script src="js/photo.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
