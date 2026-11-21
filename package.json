@@ -1,0 +1,24 @@
+{
+  "name": "k-edit-studio",
+  "version": "2.0.0",
+  "description": "K-EDIT STUDIO – personal video, music and photo editor for Android (Capacitor)",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes serve www -p 3000",
+    "android:add": "npx cap add android && node scripts/prepare-android.js",
+    "android:sync": "npx cap sync android && node scripts/prepare-android.js",
+    "android:apk": "npm run android:sync && cd android && ./gradlew assembleDebug",
+    "android:open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/app": "^6.0.1",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/filesystem": "^6.0.1",
+    "@capacitor/share": "^6.0.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  },
+  "license": "MIT"
+}
